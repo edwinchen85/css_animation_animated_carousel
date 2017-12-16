@@ -12,6 +12,8 @@ $(function() {
   setLeftClass();
 
   var carouselRunning = true;
+  var carouselRestartTimeout;
+
   var interval = setInterval(function() {
     if (carouselRunning) {
       showNextQuote();
@@ -37,6 +39,12 @@ $(function() {
 
     var index = $('.quote').index(target);
     updateState(index);
+
+    clearTimeout(carouselRestartTimeout);
+    carouselRunning = false;
+    carouselRestartTimeout = setTimeout(function() {
+      carouselRunning = true;
+    }, 10000);
   }
 
   function updateState(index) {
