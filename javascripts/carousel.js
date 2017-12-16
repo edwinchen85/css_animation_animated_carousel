@@ -18,7 +18,13 @@ $(function() {
   }, 4000);
 
   function showNextQuote() {
+    if (currentIndex === lastIndex) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
 
+    updateState(currentIndex);
   }
 
   function showQuote() {
