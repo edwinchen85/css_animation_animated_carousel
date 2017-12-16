@@ -9,6 +9,7 @@ $(function() {
   $('#quotes-carousel-pips').on('click', '.pip', showFromPip);
 
   generatePips();
+  setLeftClass();
 
   var carouselRunning = true;
   var interval = setInterval(function() {
@@ -87,7 +88,14 @@ $(function() {
   }
 
   function setLeftClass() {
-
+    var allQuotes = $('#quotes-carousel').find('.quote');
+    $('.quote.left').removeClass('left');
+    if (prevIndex > 0) {
+      var index = prevIndex - 1;
+      $(allQuotes[index]).addClass('left');
+    } else {
+      $(allQuotes[lastIndex]).addClass('left');
+    }
   }
 });
 
