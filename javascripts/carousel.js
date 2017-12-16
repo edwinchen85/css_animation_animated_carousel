@@ -49,7 +49,14 @@ $(function() {
   }
 
   function updateCarouselPosition() {
+    $('#quotes-carousel').find('.previous').removeClass('previous');
+    $('#quotes-carousel').find('.current').removeClass('current');
+    $('#quotes-carousel').find('.next').removeClass('next');
 
+    var allQuotes = $('#quotes-carousel').find('.quote');
+    $(allQuotes[prevIndex]).addClass('previous');
+    $(allQuotes[currentIndex]).addClass('current');
+    $(allQuotes[nextIndex]).addClass('next');
   }
 
   function generatePips() {
