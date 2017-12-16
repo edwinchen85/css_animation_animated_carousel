@@ -81,8 +81,9 @@ $(function() {
     $(allPips[nextIndex]).addClass('next');
   }
 
-  function showFromPip() {
-
+  function showFromPip(event) {
+    var index = $('#quotes-carousel-pips li').index(event.target);
+    updateState(index);
   }
 
   function setLeftClass() {
