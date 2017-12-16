@@ -5,3 +5,5 @@ In this project, we build an animated carousel that slides every 4 seconds. Thre
 We leverage JavaScript to loop animation of the carousel as well as respond to user interaction when carousel is clicked or pip is selected. Different class hooks are added to carousel items based on their position indices. These class hooks contain transition properties that drives carousel animation.
 
 [View demo site here.](http://edwinchen.co/css_animation_animated_carousel/)
+
+![Preview](screenshot.png)
