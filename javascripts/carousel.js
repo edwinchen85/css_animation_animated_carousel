@@ -39,7 +39,13 @@ $(function() {
   }
 
   function updateState(index) {
+    prevIndex = index === 0 ? lastIndex : index - 1;
+    currentIndex = index;
+    nextIndex = index === lastIndex ? 0 : index + 1;
 
+    updateCarouselPosition();
+    setLeftClass();
+    updatePips();
   }
 
   function updateCarouselPosition() {
