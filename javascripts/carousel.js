@@ -71,7 +71,14 @@ $(function() {
   }
 
   function updatePips() {
+    $('#quotes-carousel-pips').find('.previous').removeClass('previous');
+    $('#quotes-carousel-pips').find('.current').removeClass('current');
+    $('#quotes-carousel-pips').find('.next').removeClass('next');
 
+    var allPips = $('#quotes-carousel-pips').find('.pip');
+    $(allPips[prevIndex]).addClass('previous');
+    $(allPips[currentIndex]).addClass('current');
+    $(allPips[nextIndex]).addClass('next');
   }
 
   function showFromPip() {
