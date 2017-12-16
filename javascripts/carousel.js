@@ -105,5 +105,13 @@ $(function() {
       $(allQuotes[lastIndex]).addClass('left');
     }
   }
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      carouselRunning = false;
+    } else {
+      carouselRunning = true;
+    }
+  });
 });
 
