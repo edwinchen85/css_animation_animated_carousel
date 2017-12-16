@@ -60,7 +60,14 @@ $(function() {
   }
 
   function generatePips() {
+    var listContainer = $('#quotes-carousel-pips').find('ul');
 
+    for (var i = lastIndex; i>=0; i--) {
+      var newPip = $('<li class="pip"></li>');
+      $(listContainer).append(newPip);
+    }
+
+    updatePips();
   }
 
   function updatePips() {
