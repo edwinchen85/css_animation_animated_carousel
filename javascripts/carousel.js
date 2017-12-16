@@ -27,8 +27,15 @@ $(function() {
     updateState(currentIndex);
   }
 
-  function showQuote() {
+  function showQuote(event) {
+    if ($(event.target).hasClass('quote')) {
+      var target = $(event.target);
+    } else {
+      var target = $(event.target).parent();
+    }
 
+    var index = $('.quote').index(target);
+    updateState(index);
   }
 
   function updateState(index) {
